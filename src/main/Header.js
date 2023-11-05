@@ -3,48 +3,41 @@ import logo from '../img/logo.png';
 
 function Header() {
 
-    const hamburger = document.querySelector(".hamburger");
-    const navMenu = document.querySelector(".nav-menu");
-
-    function init() {
+    // const hamburger = document.getElementsByClassName(".hamburger");
+    // const navMenu = document.getElementsByClassName(".nav-menu");
         
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle("active");
-            navMenu.classList.toggle("active");
-        });
+    // hamburger.addEventListener('click', () => {
+    //     hamburger.classList.toggle("active");
+    //     navMenu.classList.toggle("active");
+    // });
 
-        document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
-            hamburger.classList.remove("active");
-            navMenu.classList.remove("active");
-        }));
-
-        init();
-
-    }
-    window.onload = init();
+    // document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+    //     hamburger.classList.remove("active");
+    //     navMenu.classList.remove("active");
+    // }));
 
     return (
         <header>
             <div className='conteiner'>
                 <nav className='navbar'>
 
-                    <div class="nav-branding">
-                        <img src={logo} className='logo'></img>
-                        <a href="#">blinkEgor</a>
+                    <div className='nav-branding'>
+                        <img src={logo} className='logo' alt='logo'></img>
+                        <a href='../App.js'>blinkEgor</a>
                     </div>
 
-                    <ul class="nav-menu">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">Home</a>
+                    <ul className='nav-menu'>
+                        <li className='nav-item'>
+                            <a href='../App.js' className='nav-link'>Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">About</a>
+                        <li className='nav-item'>
+                            <a href='../App.js' className='nav-link'>About</a>
                         </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">Contact</a>
+                        <li className='nav-item'>
+                            <a href='../App.js' className='nav-link'>Contact</a>
                         </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">Pages</a>
+                        <li className='nav-item'>
+                            <a href='../App.js' className='nav-link'>Pages</a>
                         </li>
                     </ul>
 
